@@ -38,27 +38,7 @@ class Stack:
 		
 	def min(self):
 		return self.minimum.data
-	
-		
-class Queue:
-	def __init__(self, head):
-		self.head = head
-		self.tail = head
-		
-	def dequeue(self):
-		if (self.head != None):
-			target = self.head.data
-			self.head = self.head.next
-			return target
-		return None
-		
-	def enqueue(self, v):
-		n = Node(v)
-		if (self.head == None):
-			self.head, self.tail = n, n
-		else:
-			self.tail.next = n
-			self.tail = n
+
 			
 class TestClass(unittest.TestCase):
 	def test_min(self):
